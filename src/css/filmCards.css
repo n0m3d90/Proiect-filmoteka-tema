@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Definirea variabilelor pentru temele Light și Dark */
+  --background-color-light: #ffffff;
+  --background-color-dark: #000000;
+  --text-color-dark: #000000;
+  --text-color-light: #ffffff;
+  --border-hover-color: #b92f2c;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px;
+  height: 100%;
+  background-color: #f5e8e8;
+}
+
+.queue,
+.watched {
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px;
+  height: 100%;
+  background-color: #f5e8e8;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.movie-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--background-color-light);
+  background-color: #f5e8e8;
+}
+
+.movie-wrapper__card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--background-color-light);
+  transition: border 0.3s ease;
+  cursor: pointer;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  width: 280px;
+  height: auto;
+  position: relative;
+  background-color: #f5e8e8;
+}
+
+.movie-wrapper__card:hover {
+  border: 1px solid var(--border-hover-color);
+  box-shadow: 0 6px 22px var(--border-hover-color);
+  scale: 1.02;
+  background-color: #f5e8e8;
+}
+
+.movie-wrapper__card-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.movie-wrapper__footer {
+  padding: 10px;
+  color: var(--text-color-light);
+}
+
+.movie-wrapper__title {
+  font-size: 16px;
+  margin: 5px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.movie-wrapper__info {
+  font-size: 14px;
+  color: #b92f2c;
+  font-weight: 500;
+  line-height: 16px;
+}
+.movie-wrapper__info-rating {
+  background-color: #b92f2c;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 500px;
+  display: inline-block;
+  margin-left: 4px;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+}
+/*-------Very Small Devices----*/
+@media (max-width: 320px) {
+  .movie-wrapper__card {
+    width: 240px;
+    padding: 0;
+  }
+  .movie-wrapper__card-img {
+    width: 100%;
+  }
+}
+/* Media query pentru tablete (min-width: 768px) */
+@media (min-width: 768px) {
+  .movie-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .movie-wrapper__card-img img {
+    width: 336px;
+    height: 455px;
+  }
+
+  .movie-wrapper__card {
+    width: 336px;
+  }
+  .queue,
+  .watched {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+/* Media query pentru desktop (min-width: 1280px) */
+@media (min-width: 1280px) {
+  .movie-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1280px;
+  }
+  .movie-wrapper__info {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .movie-wrapper__card-img img {
+    width: 295px;
+    height: auto;
+  }
+
+  .movie-wrapper__card {
+    width: 295px;
+  }
+  .queue,
+  .watched {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+/* Stiluri pentru Dark theme */
+body.dark-theme {
+  --background-color-light: #000000;
+  --text-color-light: #ffffff;
+}
+
+.dark {
+  background-color: #393646;
+}
+
+.btn-dark {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  img {
+    width: 30px;
+    height: auto;
+  }
+}

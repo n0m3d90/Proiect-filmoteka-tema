@@ -1,0 +1,35 @@
+/* Stiluri generale pentru butoanele de paginare */
+#pagination-container .tui-pagination .tui-page-btn,
+#pagination-container .tui-pagination .tui-ico-first,
+#pagination-container .tui-pagination .tui-ico-last,
+#pagination-container .tui-pagination .tui-ico-prev,
+#pagination-container .tui-pagination .tui-ico-next,
+#pagination-container .tui-pagination .tui-ico-ellip {
+  background-color: #b92f2c; /* Culoarea de fundal */
+  color: #fff; /* Culoarea textului  */
+  border: solid 1px #fff; /*   Bordura  */
+  border-radius: 5px; /* Colțuri rotunjite  */
+  margin: 5px; /*  Marginea butoanelor  */
+}
+
+#pagination-container .tui-pagination .tui-ico-first,
+#pagination-container .tui-pagination .tui-ico-last,
+#pagination-container .tui-pagination .tui-ico-prev,
+#pagination-container .tui-pagination .tui-ico-next,
+#pagination-container .tui-pagination .tui-ico-ellip {
+  border: none; /* Elimină bordura pentru icoane  */
+}
+
+#pagination-container .tui-pagination .tui-page-btn.tui-is-disabled,
+#pagination-container .tui-pagination .tui-page-btn.tui-is-selected {
+  opacity: 0.5; /*Opacitate pentru butoanele dezactivate */
+  pointer-events: none; /*Dezactivează evenimentele de mouse */
+}
+
+/*Media query pentru dimensiuni mici ale ecranului */
+@media (max-width: 500px) {
+  #pagination-container .tui-pagination {
+    max-width: 300px; /*Lățimea maximă pentru ecrane mici */
+  }
+}
+

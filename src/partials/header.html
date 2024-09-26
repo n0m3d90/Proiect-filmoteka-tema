@@ -1,19 +1,91 @@
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+<header class="header-homescreen">
+  <div class="header-container">
+    <nav class="navigation">
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a
+            href="./index.html"
+            class="navigation-button home-btn"
+            data-request="Home"
+            aria-label="home"
+          >
+            Home
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="navigation-item mylibrary-btn">
+          <a
+            class="navigation-button"
+            data-request="library"
+            aria-label="my library"
+          >
+            My library
+          </a>
+        </li>
+      </ul>
+      <ul class="watched-queue-container">
+        <li>
+          <a
+            class="navigation-button watched-btn"
+            data-request="watched"
+            aria-label="watched"
+            data-action="watch"
+          >
+            Watched
+          </a>
+        </li>
+        <li>
+          <a
+            class="navigation-button queue-btn"
+            data-request="queue"
+            aria-label="queue"
+            data-action="queue"
+          >
+            Queue
+          </a>
         </li>
       </ul>
     </nav>
+    <form class="search-form">
+      <input
+        id="searchInput"
+        type="text"
+        class="search-form-input"
+        name="searchQuery"
+        placeholder="Movie Search"
+        aria-label="movie search"
+        autocomplete="off"
+      />
+      <button type="submit" class="submit-btn" aria-label="search">
+        <!-- SVG-ul search-2.svg importat -->
+        <i class="fa fa-search" aria-hidden="true"></i>
+
+        <!-- SVG-ul search-2.svg importat  -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <use href="../img/search-2.svg"></use>
+        </svg>
+      </button>
+    </form>
+    <div class="logo-container">
+      <a href="./index.html">
+        <!-- SVG-ul film.svg importat -->
+        <a href="./index.html"><i class="fas fa-film film-icon"></i></a>
+
+        <h1 class="title">Filmoteka</h1>
+      </a>
+    </div>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round">
+          <i id="darktheme" class="themes dark-themes theme-icon"></i>
+          <i id="brighttheme" class="themes bright-theme theme-icon"></i>
+        </div>
+      </label>
+    </div>
   </div>
 </header>
