@@ -1,0 +1,38 @@
+#scrollToTopBtn {
+    position: fixed;
+    /* Poziționează-l în raport cu viewport-ul */
+    bottom: 150px;
+    right: 20px;
+    z-index: 12;
+    border: none;
+    outline: none;
+    background-color: #b92f2c;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.fas.fa-arrow-up {
+    color: #fff;
+}
+
+#scrollToTopBtn:hover .fas.fa-arrow-up {
+    scale: 2;
+}
+
+#scrollToTopBtn:hover {
+    box-shadow: 4px 5px 10px #b92f2c;
+}
+
+@media (max-width: 320px) {
+    #scrollToTopBtn {
+        bottom: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    #scrollToTopBtn {
+        bottom: 50px;
+        right: 10px;
+    }
+}

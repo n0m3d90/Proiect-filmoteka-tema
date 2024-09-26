@@ -1,0 +1,190 @@
+.film-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .film-modal-content {
+    max-height: 98%;
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 5px 7px 15px rgba(184, 184, 184, 0.6);
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    font-family: Roboto;
+    overflow-y: auto;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 6px;
+    right: 13px;
+    cursor: pointer;
+    color: #000000;
+    font-size: 40px;
+    padding: 5px;
+    line-height: 1;
+  }
+  .close-modal:hover {
+    scale: 1.4;
+  }
+  .film-modal-trailer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio de 16:9 */
+    overflow: hidden;
+  }
+  .film-modal-poster img {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    object-fit: scale-down;
+    display: inline-block;
+    justify-content: center;
+  }
+  .film-modal-trailer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .film-modal-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #b92f2c;
+    font-style: normal;
+    line-height: 20px;
+    margin-top: 15px;
+  }
+  .film-modal-content h3 {
+    font-size: 16px;
+  }
+  .film-modal-score span {
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    background-color: #b92f2c;
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
+  .modal-genre-paragraph b {
+    font-size: 16px;
+  }
+  .film-modal-about {
+    font-size: 18px;
+  }
+  .film-modal .film-modal-content p {
+    font-size: 14px;
+  }
+  .film-modal-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+  }
+  .film-modal-actions button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    border-radius: 100px;
+    background: #b92f2c;
+    cursor: pointer;
+    color: #fff;
+    border: #fff;
+  }
+  .film-modal-actions button:hover {
+    background: #000;
+    color: #fff;
+  }
+  
+  @media (max-width: 320px) {
+    .film-modal .film-modal-content {
+      padding: 5px;
+      width: 95%;
+    }
+    .film-modal-content .close-modal {
+      top: 5px;
+      right: 5px;
+      font-size: 26px;
+    }
+    .film-modal-content .film-modal-title {
+      font-size: 20px;
+      margin-top: 25px;
+      font-weight: 500;
+    }
+    .film-modal-content .film-modal-about {
+      font-size: 16px;
+    }
+    .film-modal-content p {
+      font-size: 16px;
+    }
+    .film-modal-actions {
+      font-size: 12px;
+      gap: 15px;
+      padding: 5px;
+    }
+    .film-modal-actions button {
+      padding: 10px 5px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .film-modal-content {
+      height: auto;
+      width: 95%;
+      padding: 10px;
+    }
+    .close-modal {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #000000;
+      font-size: 30px;
+      padding: 0;
+    }
+  
+    .film-modal-content .film-modal-actions button {
+      padding: 5px;
+    }
+    .film-modal-actions button {
+      padding: 5px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .film-modal-title {
+      margin-top: 30px;
+    }
+    .film-modal-content {
+      max-width: 800px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .film-modal-content {
+      max-width: 950px;
+    }
+  }
+  

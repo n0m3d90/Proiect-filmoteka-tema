@@ -1,21 +1,231 @@
-.footer {
-  padding: 20px 0;
-}
-.footer-desc {
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: auto;
+  color: #080808;
   text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  max-width: 320px;
+  margin: 0 auto;
 }
-.footer-link {
-  position: relative;
+
+footer {
+  background-color: #f7f7f7;
+  width: 100%;
 }
-.footer-link::before {
+
+.text-direction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.heart-icon {
+  color: #b92f2c;
+  width: 30px;
+  height: 20.76px;
+  flex-shrink: 0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.students-goit {
+  color: orange;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.rights-reserved {
+  margin-bottom: 0;
+}
+
+.footer-modal {
+  display: none;
+  position: fixed;
+  z-index: 12;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.footer-modal-content {
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  max-height: 80vh;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 30px #e6aa13;
+  border: 2px outset #e6aa13;
+  color: white;
+  overflow: hidden;
+}
+.title-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+.footer-modal-title {
+  font-size: 18px;
+}
+.close-button-member {
+  background-color: transparent;
+  border: none;
+}
+
+.close-button-member svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.close-button-member:hover,
+.close-button-member:focus {
+  scale: 1.2;
+}
+.group-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+.member-section {
+  background-color: rgba(202, 184, 45, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.member-title,
+.member-ttl1 {
+  color: white;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.member-section:hover .last-image {
+  border: 3px solid #e6aa13;
+}
+.member-section:hover {
+  background-color: rgb(255, 255, 255, 0.9);
+  color: #e6aa13;
+}
+.member-section:hover .member-description,
+.member-section:hover .member-name {
+  color: #e6aa13;
+}
+
+.member-section {
+  /* stiluri existente */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.member-section:hover {
+  box-shadow: 0 0 15px 10px rgba(185, 47, 44, 0.5);
+  transform: scale(1.05);
+}
+
+.footer-modal-title:hover:after {
+  left: 100%;
+  transform: skewX(50deg) skewY(10deg);
+}
+
+.footer-modal-title:before,
+.footer-modal-title:after {
   content: '';
   position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%) skewX(-12deg);
-  z-index: -1;
-  width: 110%;
-  height: 24%;
-  background-color: #41d1ff;
-  transition: 200ms ease;
+  top: 0;
+  width: 100%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: 0.9s;
+  pointer-events: none;
+}
+
+.footer-modal-title:before {
+  left: -500%;
+}
+
+.footer-modal-title:after {
+  right: -400%;
+}
+
+@media (max-width: 500px) {
+  .footer-modal-content {
+    width: 90%;
+  }
+  .member-section {
+    padding: 0;
+  }
+  .member-name {
+    font-size: 12px;
+  }
+  .member-description {
+    font-size: 12px;
+  }
+  .member-name {
+    margin: 0;
+  }
+  .member-description {
+    line-height: 50%;
+  }
+  .footer-container {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .group-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .title-btn-container {
+    margin-bottom: 50px;
+  }
+  .footer-modal-title {
+    font-size: 28px;
+  }
+  .footer-modal-content {
+    max-width: 800px;
+    height: 500px;
+  }
+  .member-section {
+    height: auto;
+  }
+
+  .footer-container {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .group-section {
+    gap: 28px;
+  }
+
+  .footer-modal-content {
+    max-width: 1000px;
+  }
 }
