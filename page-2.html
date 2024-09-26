@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 2</title>
+    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-5j8hDJaI.css">
+  </head>
+  <body>
+    <header class="header-homescreen">
+  <div class="header-container">
+    <nav class="navigation">
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a
+            href="./index.html"
+            class="navigation-button home-btn"
+            data-request="Home"
+            aria-label="home"
+          >
+            Home
+          </a>
+        </li>
+        <li class="navigation-item mylibrary-btn">
+          <a
+            class="navigation-button"
+            data-request="library"
+            aria-label="my library"
+          >
+            My library
+          </a>
+        </li>
+      </ul>
+      <ul class="watched-queue-container">
+        <li>
+          <a
+            class="navigation-button watched-btn"
+            data-request="watched"
+            aria-label="watched"
+            data-action="watch"
+          >
+            Watched
+          </a>
+        </li>
+        <li>
+          <a
+            class="navigation-button queue-btn"
+            data-request="queue"
+            aria-label="queue"
+            data-action="queue"
+          >
+            Queue
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <form class="search-form">
+      <input
+        id="searchInput"
+        type="text"
+        class="search-form-input"
+        name="searchQuery"
+        placeholder="Movie Search"
+        aria-label="movie search"
+        autocomplete="off"
+      />
+      <button type="submit" class="submit-btn" aria-label="search">
+        <!-- SVG-ul search-2.svg importat -->
+        <i class="fa fa-search" aria-hidden="true"></i>
+
+        <!-- SVG-ul search-2.svg importat  -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <use href="../img/search-2.svg"></use>
+        </svg>
+      </button>
+    </form>
+    <div class="logo-container">
+      <a href="./index.html">
+        <!-- SVG-ul film.svg importat -->
+        <a href="./index.html"><i class="fas fa-film film-icon"></i></a>
+
+        <h1 class="title">Filmoteka</h1>
+      </a>
+    </div>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round">
+          <i id="darktheme" class="themes dark-themes theme-icon"></i>
+          <i id="brighttheme" class="themes bright-theme theme-icon"></i>
+        </div>
+      </label>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      <div class="container">
+        <h1 class="main-title">
+          <span class="main-title-gradient">Welcome</span> to page 2
+        </h1>
+        <a class="back-link" href="./index.html">Go back</a>
+
+      </div>
+    </main>
+
+    <footer>
+  <div class="footer-container">
+    <p class="rights-reserved">
+      ©<span id="year"></span> | All Rights Reserved | Developed with
+    </p>
+    <div class="text-direction">
+      <svg class="heart-icon">
+        <use href="/vanilla-app-template/assets/symbol-defs-KbIyp_qB.svg#icon-Vector-1"></use>
+      </svg>
+      <!-- Open Modal -->
+      <p class="students-goit" id="openFooterModal">by GoIT Students</p>
+      <div id="myFooterModal" class="footer-modal">
+        <!-- Modal content -->
+        <div class="footer-modal-content">
+          <div class="title-btn-container">
+            <h3 class="footer-modal-title">The project was made by:</h3>
+            <button type="button" class="close-button-member">
+              <svg class="close-icon-member">
+                <use href="/vanilla-app-template/assets/icon-close-BxkB0GYk.svg#icon-close-1"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="group-section">
+            <li class="member-section">
+              <section class="member-ttl1">
+                <h4 class="member-name">Lazar Madalina</h4>
+                <span class="member-description">
+                  Team Leader, Frontend Developer</span
+                >
+              </section>
+            </li>
+            <li class="member-section">
+              <section class="member-ttl1">
+                <h4 class="member-name">Calin Daria</h4>
+                <span class="member-description">
+                  Scrum Master, Frontend Developer</span
+                >
+              </section>
+            </li>
+            <li class="member-section">
+              <section class="member-ttl1">
+                <h4 class="member-name">Dogaru Alina</h4>
+                <span class="member-description"> Frontend Developer</span>
+              </section>
+            </li>
+            <li class="member-section">
+              <section class="member-ttl1">
+                <h4 class="member-name">Focsa Andrei</h4>
+                <span class="member-description"> Frontend Developer</span>
+              </section>
+            </li>
+            <li class="member-section">
+              <section class="member-ttl1">
+                <h4 class="member-name">Capatina Catalina</h4>
+                <span class="member-description"> Frontend Developer</span>
+              </section>
+            </li>
+            <li class="member-section">
+              <section class="member-ttl1">
+                <h4 class="member-name">Chivu Florian</h4>
+                <span class="member-description"> Frontend Developer</span>
+              </section>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
